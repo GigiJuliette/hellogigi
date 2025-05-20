@@ -10,6 +10,11 @@ h1 {
   text-align: center;
 }
 
+@media (max-width: 700px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
 .banner {
   overflow: hidden;
   z-index: 2;
@@ -76,9 +81,6 @@ h1 {
   }
 }
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
   background: #C8B3F6;
   width: 100vw;
   height: 100vh;
