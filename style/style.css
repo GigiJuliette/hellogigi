@@ -10,11 +10,23 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-family: "Bagel Fat One";
+  font-weight: 400;
+}
+
 @media (max-width: 700px) {
   h1 {
     font-size: 5rem;
   }
 }
+.filler {
+  font-family: "Bagel Fat One";
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 5rem;
+}
+
 .banner {
   overflow: hidden;
   z-index: 2;
@@ -109,6 +121,38 @@ header svg path {
 @keyframes header {
   to {
     height: 10rem;
+  }
+}
+.scroll {
+  height: 30vh;
+  position: relative;
+}
+.scroll img:nth-child(1) {
+  position: absolute;
+  height: 100%;
+  aspect-ratio: 1/1;
+  left: calc(50% - 15vh);
+  transform-origin: 50% 50%;
+  animation: scrollrotate;
+  animation-timeline: view();
+}
+.scroll img:nth-child(2) {
+  position: absolute;
+  height: 80%;
+  aspect-ratio: 1/1;
+  top: 3vh;
+  left: calc(50% - 12vh);
+  transform-origin: 50% 50%;
+  animation: scrollrotate reverse;
+  animation-timeline: view();
+}
+
+@keyframes scrollrotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
